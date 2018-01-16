@@ -13,6 +13,8 @@
 		0A7B2DD3200D93740006B858 /* AitneKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7B2DC5200D93730006B858 /* AitneKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A7B2DDB200D93CC0006B858 /* AitneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7B2DC3200D93730006B858 /* AitneKit.framework */; };
 		0A7B2DDD200D97720006B858 /* SwifterMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7B2DDC200D97720006B858 /* SwifterMac.framework */; };
+		0A7B2DDF200D98C80006B858 /* Aitne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B2DDE200D98C80006B858 /* Aitne.swift */; };
+		0A7B2DE1200D99000006B858 /* FakeAitne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B2DE0200D99000006B858 /* FakeAitne.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		0A7B2DD0200D93740006B858 /* AitneKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AitneKitTests.swift; sourceTree = "<group>"; };
 		0A7B2DD2200D93740006B858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A7B2DDC200D97720006B858 /* SwifterMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwifterMac.framework; path = Carthage/Build/Mac/SwifterMac.framework; sourceTree = "<group>"; };
+		0A7B2DDE200D98C80006B858 /* Aitne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aitne.swift; sourceTree = "<group>"; };
+		0A7B2DE0200D99000006B858 /* FakeAitne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAitne.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			children = (
 				0A7B2DC5200D93730006B858 /* AitneKit.h */,
 				0A7B2DC6200D93730006B858 /* Info.plist */,
+				0A7B2DDE200D98C80006B858 /* Aitne.swift */,
+				0A7B2DE0200D99000006B858 /* FakeAitne.swift */,
 			);
 			path = AitneKit;
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 					};
 					0A7B2DC2200D93730006B858 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					0A7B2DCA200D93730006B858 = {
@@ -272,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A7B2DE1200D99000006B858 /* FakeAitne.swift in Sources */,
+				0A7B2DDF200D98C80006B858 /* Aitne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -452,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -481,6 +492,7 @@
 		0A7B2DD8200D93740006B858 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AitneKitTests/Info.plist;
@@ -496,6 +508,7 @@
 		0A7B2DD9200D93740006B858 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AitneKitTests/Info.plist;
