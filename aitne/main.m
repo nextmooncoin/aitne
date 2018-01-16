@@ -5,8 +5,10 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSString *key = @"key";
+        NSString *secret = @"secret";
+        Aitne *aitne = [[Aitne alloc] initWithConsumerKey: key consumerSecret: secret];
+        [aitne run];
     }
     return 0;
 }

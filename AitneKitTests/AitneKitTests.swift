@@ -15,9 +15,18 @@ class AitneKitTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_synchronizedCalls() {
+        let key = "someKey"
+        let secret = "someSecret"
+        let spyAitne = SpyAitne(consumerKey: key, consumerSecret: secret)
+        spyAitne.run()
+        
+        XCTAssertEqual(spyAitne.twitterTimelineCallCount, 1)
+        XCTAssertEqual(spyAitne.analyzeTwitterTimelineCallCount, 1)
+        XCTAssertEqual(spyAitne.tweetResultsCallCount, 1)
+        
+        XCTAssertTrue(spyAitne.twitterTimelineCallDate < spyAitne.analyzeTwitterTimelineCallDate)
+        XCTAssertTrue(spyAitne.analyzeTwitterTimelineCallDate < spyAitne.tweetResultsCallDate)
     }
 
 }
