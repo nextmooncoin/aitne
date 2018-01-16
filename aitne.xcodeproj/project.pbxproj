@@ -14,7 +14,7 @@
 		0A7B2DDB200D93CC0006B858 /* AitneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7B2DC3200D93730006B858 /* AitneKit.framework */; };
 		0A7B2DDD200D97720006B858 /* SwifterMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7B2DDC200D97720006B858 /* SwifterMac.framework */; };
 		0A7B2DDF200D98C80006B858 /* Aitne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B2DDE200D98C80006B858 /* Aitne.swift */; };
-		0A7B2DE1200D99000006B858 /* FakeAitne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B2DE0200D99000006B858 /* FakeAitne.swift */; };
+		0A7B2DE1200D99000006B858 /* SpyAitne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B2DE0200D99000006B858 /* SpyAitne.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		0A7B2DD2200D93740006B858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A7B2DDC200D97720006B858 /* SwifterMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwifterMac.framework; path = Carthage/Build/Mac/SwifterMac.framework; sourceTree = "<group>"; };
 		0A7B2DDE200D98C80006B858 /* Aitne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aitne.swift; sourceTree = "<group>"; };
-		0A7B2DE0200D99000006B858 /* FakeAitne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAitne.swift; sourceTree = "<group>"; };
+		0A7B2DE0200D99000006B858 /* SpyAitne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyAitne.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 				0A7B2DC5200D93730006B858 /* AitneKit.h */,
 				0A7B2DC6200D93730006B858 /* Info.plist */,
 				0A7B2DDE200D98C80006B858 /* Aitne.swift */,
-				0A7B2DE0200D99000006B858 /* FakeAitne.swift */,
+				0A7B2DE0200D99000006B858 /* SpyAitne.swift */,
 			);
 			path = AitneKit;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A7B2DE1200D99000006B858 /* FakeAitne.swift in Sources */,
+				0A7B2DE1200D99000006B858 /* SpyAitne.swift in Sources */,
 				0A7B2DDF200D98C80006B858 /* Aitne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

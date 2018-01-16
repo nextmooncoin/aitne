@@ -3,13 +3,22 @@
 import Foundation
 import SwifterMac
 
-public class Aitne  {
-    private let swifter: Swifter
+protocol AitneProtocol {
+    func twitterTimeline()
+    func analyzeTwitterTimeline()
+    func tweetResults()
+}
+
+@objc
+public class Aitne: NSObject, AitneProtocol {
+    let swifter: Swifter
     
-    public init(swifter: Swifter) {
-        self.swifter = swifter
+    @objc
+    public init(consumerKey: String, consumerSecret: String) {
+        self.swifter = Swifter(consumerKey: consumerKey, consumerSecret: consumerSecret)
     }
     
+    @objc
     public func run() {
         let serialQueue = DispatchQueue(label: "com.nextmooncoin.adrastea", qos: .default)
         
@@ -26,15 +35,15 @@ public class Aitne  {
         }
     }
     
-    private func twitterTimeline() {
+    internal func twitterTimeline() {
         print("obtain twitter timeline")
     }
     
-    private func analyzeTwitterTimeline() {
+    internal func analyzeTwitterTimeline() {
         print("analyze twitter timeline")
     }
     
-    private func tweetResults() {
+    internal func tweetResults() {
         print("tweet results")
     }
 }

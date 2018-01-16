@@ -9,5 +9,3 @@ FOUNDATION_EXPORT double AitneKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char AitneKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AitneKit/PublicHeader.h>
-
-
