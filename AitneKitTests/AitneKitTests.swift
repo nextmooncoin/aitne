@@ -5,28 +5,19 @@ import XCTest
 
 class AitneKitTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func test_synchronizedCalls() {
-        let key = "someKey"
-        let secret = "someSecret"
-        let spyAitne = SpyAitne(consumerKey: key, consumerSecret: secret)
+    func test_keysAndTokens() {
+        let consumerKey = "someKey"
+        let consumerSecret = "someSecret"
+        let accessToken = "someToken"
+        let accessTokenSecret = "someTokenSecret"
+        
+        let spyAitne = SpyAitne(consumerKey: consumerKey, consumerSecret: consumerSecret, accessToken: accessToken, accessTokenSecret: accessTokenSecret)
         spyAitne.run()
         
-        XCTAssertEqual(spyAitne.twitterTimelineCallCount, 1)
-        XCTAssertEqual(spyAitne.analyzeTwitterTimelineCallCount, 1)
-        XCTAssertEqual(spyAitne.tweetResultsCallCount, 1)
-        
-        XCTAssertTrue(spyAitne.twitterTimelineCallDate < spyAitne.analyzeTwitterTimelineCallDate)
-        XCTAssertTrue(spyAitne.analyzeTwitterTimelineCallDate < spyAitne.tweetResultsCallDate)
+        XCTAssertEqual(spyAitne.consumerKey, "someKey")
+        XCTAssertEqual(spyAitne.consumerSecret, "someSecret")
+        XCTAssertEqual(spyAitne.accessToken, "someToken")
+        XCTAssertEqual(spyAitne.accessTokenSecret, "someTokenSecret")
     }
 
 }
