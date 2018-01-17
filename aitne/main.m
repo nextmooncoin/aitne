@@ -5,9 +5,11 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSString *key = @"key";
-        NSString *secret = @"secret";
-        Aitne *aitne = [[Aitne alloc] initWithConsumerKey: key consumerSecret: secret];
+        NSString *consumerKey = @"consumerKey";
+        NSString *consumerSecret = @"consumerSecret";
+        NSString *accessToken = @"accessToken";
+        NSString *accessTokenSecret = @"accessTokenSecret";
+        Aitne *aitne = [[Aitne alloc] initWithConsumerKey: consumerKey consumerSecret: consumerSecret accessToken: accessToken accessTokenSecret: accessTokenSecret];
         [aitne run];
     }
     return 0;

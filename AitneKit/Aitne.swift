@@ -3,47 +3,22 @@
 import Foundation
 import SwifterMac
 
-protocol AitneProtocol {
-    func twitterTimeline()
-    func analyzeTwitterTimeline()
-    func tweetResults()
-}
-
 @objc
-public class Aitne: NSObject, AitneProtocol {
+public class Aitne: NSObject {
     let swifter: Swifter
     
     @objc
-    public init(consumerKey: String, consumerSecret: String) {
-        self.swifter = Swifter(consumerKey: consumerKey, consumerSecret: consumerSecret)
+    public init(consumerKey: String, consumerSecret: String, accessToken: String, accessTokenSecret: String) {
+        self.swifter = Swifter(consumerKey: consumerKey, consumerSecret: consumerSecret, oauthToken: accessToken, oauthTokenSecret: accessTokenSecret)
     }
     
     @objc
     public func run() {
-        let serialQueue = DispatchQueue(label: "com.nextmooncoin.adrastea", qos: .default)
+        // use cooridnators?
         
-        serialQueue.sync() {
-            self.twitterTimeline()
-        }
-        
-        serialQueue.sync() {
-            self.analyzeTwitterTimeline()
-        }
-        
-        serialQueue.sync() {
-            self.tweetResults()
-        }
-    }
-    
-    internal func twitterTimeline() {
-        print("obtain twitter timeline")
-    }
-    
-    internal func analyzeTwitterTimeline() {
-        print("analyze twitter timeline")
-    }
-    
-    internal func tweetResults() {
-        print("tweet results")
+        // twitter login
+        // on completion, get timeline or exit
+        // on completion, (analyze timeline and tweet results) or exit
+        // on completion exit
     }
 }
